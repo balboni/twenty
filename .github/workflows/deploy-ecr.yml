@@ -52,3 +52,28 @@ jobs:
         run: |
           echo "Image pushed: $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           echo "Image pushed: $ECR_REGISTRY/$ECR_REPOSITORY:latest"
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to EC2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          EC2_HOST: 3.151.91.15
+          EC2_USER: ec2-user
+          AWS_REGION: us-east-2
+          ECR_REGISTRY: 983142347498.dkr.ecr.us-east-2.amazonaws.com
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST << 'DEPLOY'
+            aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 983142347498.dkr.ecr.us-east-2.amazonaws.com
+            cd ~/twenty
+            docker-compose pull
+            docker-compose up -d
+            echo "Deploy complete. Waiting for health check..."
+            sleep 10
+            curl --fail http://localhost:3000/healthz && echo " Health check passed!" || echo " Health check failed!"
+          DEPLOY
