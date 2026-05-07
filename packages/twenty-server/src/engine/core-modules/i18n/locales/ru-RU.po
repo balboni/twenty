@@ -1324,6 +1324,16 @@ msgstr "Город"
 msgid "Close date"
 msgstr "Дата Закрытия"
 
+#. js-lingui-id: gwrVqU
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
+msgid "Close-Rate"
+msgstr ""
+
+#. js-lingui-id: PrSKgF
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
+msgid "Close-Rate Pilot"
+msgstr ""
+
 #. js-lingui-id: o21Tgt
 #: src/modules/workflow/common/exceptions/workflow-version-step.exception.ts
 msgid "Code step execution failed."
@@ -2734,6 +2744,11 @@ msgstr "Поля действия формы должны иметь уника�
 #: src/modules/workflow/workflow-trigger/utils/assert-form-step-is-valid.util.ts
 msgid "Form action must have at least one field"
 msgstr "Действие формы должно иметь хотя бы одно поле"
+
+#. js-lingui-id: CFfJMg
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
+msgid "FracCOO"
+msgstr ""
 
 #. js-lingui-id: 39y5bn
 #: src/engine/api/graphql/graphql-query-runner/group-by/resolvers/utils/format-result-with-group-by-dimension-values.util.ts
@@ -5199,6 +5214,11 @@ msgstr ""
 msgid "Opportunity stage"
 msgstr ""
 
+#. js-lingui-id: sc+wb2
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
+msgid "Opportunity type"
+msgstr ""
+
 #. js-lingui-id: 2mFkfl
 #: src/engine/metadata-modules/flat-field-metadata/validators/utils/validate-enum-flat-field-metadata.util.ts
 #: src/engine/metadata-modules/flat-field-metadata/validators/utils/validate-enum-flat-field-metadata.util.ts
@@ -5273,6 +5293,7 @@ msgid "Options are required for enum fields"
 msgstr "Для полей типа перечисление требуются параметры"
 
 #. js-lingui-id: /IX/7x
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-attachment-standard-flat-field-metadata.util.ts
 msgid "Other"
 msgstr ""
@@ -7393,6 +7414,7 @@ msgid "Two-factor authentication verification is required."
 msgstr "Требуется подтверждение двухфакторной аутентификации."
 
 #. js-lingui-id: +zy2Nq
+#: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-opportunity-standard-flat-field-metadata.util.ts
 #: src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-message-channel-standard-flat-field-metadata.util.ts
 msgid "Type"
 msgstr ""
