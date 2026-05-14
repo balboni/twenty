@@ -342,13 +342,17 @@ export class CreateLeadConversionWorkflowsCommand extends ActiveOrSuspendedWorks
 
     const workflowBase = {
       statuses: ['ACTIVE'],
-      createdBySource: FieldActorSource.SYSTEM,
-      createdByWorkspaceMemberId: null,
-      createdByName: 'System',
-      createdByContext: {},
-      updatedBySource: FieldActorSource.SYSTEM,
-      updatedByWorkspaceMemberId: null,
-      updatedByName: 'System',
+      createdBy: {
+        source: FieldActorSource.SYSTEM,
+        workspaceMemberId: null,
+        name: 'System',
+        context: {},
+      },
+      updatedBy: {
+        source: FieldActorSource.SYSTEM,
+        workspaceMemberId: null,
+        name: 'System',
+      },
     };
 
     // Create workflows
