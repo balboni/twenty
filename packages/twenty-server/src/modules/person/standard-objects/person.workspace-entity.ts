@@ -45,6 +45,7 @@ export class PersonWorkspaceEntity extends BaseWorkspaceEntity {
   /** @deprecated Use `avatarFile` field instead */
   avatarUrl: string | null;
   avatarFile: FileOutput[] | null;
+  category: string | null;
   position: number;
   createdBy: ActorMetadata;
   updatedBy: ActorMetadata;

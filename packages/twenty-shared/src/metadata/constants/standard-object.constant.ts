@@ -710,6 +710,9 @@ export const STANDARD_OBJECTS = {
       searchVector: {
         universalIdentifier: '85c71601-72f9-4b7b-b343-d46100b2c74d',
       },
+      category: {
+        universalIdentifier: 'a3b4c5d6-1001-4a01-8001-000000000001',
+      },
     },
     indexes: {
       accountOwnerIdIndex: {
@@ -2138,6 +2141,9 @@ export const STANDARD_OBJECTS = {
       },
       searchVector: {
         universalIdentifier: '57d1d7ad-fa10-44fc-82f3-ad0959ec2534',
+      },
+      category: {
+        universalIdentifier: 'a3b4c5d6-1002-4a02-8002-000000000002',
       },
     },
     indexes: {
