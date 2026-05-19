@@ -178,6 +178,7 @@ const buildConvertToOpportunitySteps = () => [
         objectName: 'opportunity',
         objectRecord: {
           name: '{{trigger.name}}',
+          stage: 'NEW',
         },
       },
       outputSchema: {},
